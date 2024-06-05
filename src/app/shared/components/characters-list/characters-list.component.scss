@@ -1,0 +1,31 @@
+::ng-deep {
+  .page-link {
+    font-family: "Creepster", system-ui;
+    background-color: var(--black-500);
+    border: none;
+    color: var(--gray);
+  
+    &:hover {
+      color: var(--border-font-title);
+      background-color: var(--font-title);
+      border-color: var(--border-font-title);
+    }
+  }
+
+  .page-item {
+    &.active .page-link {
+      color: var(--font-title);
+      background-color: var(--border-font-title);
+      border-color: var(--font-title);
+    }
+  
+    &.disabled .page-link {
+      pointer-events: none;
+      background-color: var(--black-500);
+      opacity: .5;
+    }
+  }
+}
+
+
+

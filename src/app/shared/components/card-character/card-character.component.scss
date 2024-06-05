@@ -1,0 +1,30 @@
+.container-favorite {
+  position: relative;
+  margin-bottom: -2.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+.card-character {
+  border: var(--border);
+  border-radius: 8px;
+  height: 100%;
+  img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+  }
+
+  .info {
+    padding: 0.5rem 0.35rem;
+    .name {
+      font-family: "Creepster", system-ui;
+      font-size: 1.5rem;
+      color: var(--white);
+    }
+    p {
+      font-size: 1rem;
+      color: var(--gray)
+    }
+  }
+}

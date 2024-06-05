@@ -1,0 +1,16 @@
+<header>
+  <img src="../../../../assets/images/png/logo.png" alt="Logo da pagina Rick and morty">
+  <nav class="menu">
+    <ul>
+      <li [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon fontIcon="home"></mat-icon>
+        <p>Início</p>
+      </li>
+      <li [routerLink]="['/favorites']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon fontIcon="favorite"></mat-icon>
+        <p>Favoritos</p>
+        <span>{{counterFavorites}}</span>
+      </li>
+    </ul>
+  </nav>
+</header>

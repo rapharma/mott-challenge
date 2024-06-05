@@ -1,0 +1,12 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Pesquisar</mat-label>
+    <input 
+      type="text"
+      matInput
+      [formControl]="search"
+      placeholder="Informe o nome do personagem!"
+      (keyup)="searchCharacter()"
+    />
+  </mat-form-field>
+</form>

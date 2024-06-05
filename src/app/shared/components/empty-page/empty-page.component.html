@@ -1,0 +1,10 @@
+<div class="card-empty">
+  @if (isRoute === '') {
+    <strong>Nada foi encontrado</strong>
+    <p>Tente realizar uma nova busca.</p>
+  } @else {
+    <strong>Parece que ainda não tem favoritos</strong>
+    <p>volte a página inicial e escolha os melhores para você.</p>
+    <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Voltar ao início</a>
+  }
+</div>

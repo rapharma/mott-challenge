@@ -1,0 +1,24 @@
+<div class="characters-container">
+  @for (character of charactersList; track character.id) {
+    <app-card-character 
+      [name]="character.name" 
+      [character]="character"
+    ></app-card-character>
+  }
+</div>
+
+<div class="d-flex justify-content-center">
+  <pagination 
+    [boundaryLinks]="true" 
+    [maxSize]="8" 
+    [totalItems]="infoPaginator.count"
+    [itemsPerPage]="20" 
+    previousText="&lsaquo;" 
+    nextText="&rsaquo;" 
+    firstText="&laquo;" 
+    lastText="&raquo;"
+    (pageChanged)="handleSelectedPaginator($event);"
+    [(ngModel)]="selectedPaginator"
+  >
+  </pagination>
+</div>

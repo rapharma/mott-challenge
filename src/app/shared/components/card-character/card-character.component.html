@@ -1,0 +1,11 @@
+<div class="card-character">
+  <div class="container-favorite">
+    <app-button-favorite [characterData]="character"></app-button-favorite>
+  </div>
+  <img [src]="character.image" [alt]="name" srcset="">
+  <div class="info">
+    <p class="name">{{name | slice:0:19}}{{name.length > 19 ? '...' : ''}}</p>
+    <p>{{character.species}}</p>
+    <p>{{character.type}}</p>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<button mat-icon-button (click)="toggleSelected()" [ngClass]="selected ? 'active' : ''">
+
+  @if (selected) {
+    <mat-icon>
+      favorite
+    </mat-icon>
+  } @else {
+    <mat-icon>
+      favorite_border
+    </mat-icon>
+  }
+
+
+</button>
