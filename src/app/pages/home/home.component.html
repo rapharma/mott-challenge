@@ -1,0 +1,14 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="title">
+    <h1 class="title-creep">Inicio</h1>
+    <app-search (emitSearchCharacters)="handleSearchCharacters($event)" (emitValueSearch)="handleValueSearch($event)"></app-search>
+  </div>
+
+  @if(characters && characters.length > 0) {
+    <app-characters-list [charactersList]="characters" [infoPaginator]="infoPaginator" [returnStart]="actualPage" (pageSelector)="handleCharacterListPaginator($event)"></app-characters-list>
+  } @else {
+    <app-empty-page></app-empty-page>
+  }
+</div>
