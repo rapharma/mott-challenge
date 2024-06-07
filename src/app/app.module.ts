@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { metaReducers } from './store/app.state';
 import { appReducer } from './store/reducers';
+import { ApiCharacterRepository, CharacterRepository } from './shared/services/character.repository';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { appReducer } from './store/reducers';
   ],
   providers: [
     provideAnimationsAsync(),
+    { provide: CharacterRepository, useClass: ApiCharacterRepository }
   ],
   bootstrap: [AppComponent]
 })
